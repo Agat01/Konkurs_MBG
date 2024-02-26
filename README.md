@@ -1,12 +1,12 @@
 # Konkurs_MBG
 
 W ramach pracy licencjackiej, stworzyłam aplikację webową do obsługi międzyklasowego konkursu matematycznego. Nad aplikacją pracowałam 10 miesięcy, ostatecznie aplikacja nie została wykorzystana.
-Aplikacja miała służyć do obsługi konkursu od rejestracji klas, poprzez przesyłanie zadań konkursowych do wyświetlania uczestników, wyników i rankingów.<br>
+Aplikacja miała służyć do obsługi konkursu od rejestracji klas, poprzez przesyłanie zadań konkursowych do wyświetlania uczestników, wyników i statystyk. Aplikacja posiada również panel administratora, w którym administrator może zarządzać(dodawać, edytować i usuwać dane) całą bazą danych (17 tabel) z poziomu tego panelu. <br>
 Aplikacja została napisana za pomocą technologii:
 Serwlety Java, JSP, HTML, CSS, JavaScript, JQuery, JSON, Oracle.
 <br><br>
 ![image](https://github.com/Agat01/Konkurs_MBG/assets/123018088/ae12a9ec-dde2-4bc0-b50c-a5610d94db73) <br><br>
-Formularz rejestracyjny <br><br>
+Formularz rejestracyjny: <br><br>
 ![image](https://github.com/Agat01/Konkurs_MBG/assets/123018088/4482dec4-3c60-473e-9e02-ca45b06cd113) <br>
 ![image](https://github.com/Agat01/Konkurs_MBG/assets/123018088/caf38cd9-ba40-4cd8-99ff-c1013fd48b5c) <br><br>
 Po poprawnym wypełnieniu i przesłaniu formularza zostaje wygenerowany plik pdf z potwierdzeniem zgłoszenia: <br><br>
