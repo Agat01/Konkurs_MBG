@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jstl-1.2.jar/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/ojdbc11.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Server"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/itext-5.0.1.jar/itext-5.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jar_files/activation-1.1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JPA"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/gson-2.2.4.jar/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jar_files (2)/poi-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Downloads/jar_files (2)/poi-ooxml-5.2.3.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

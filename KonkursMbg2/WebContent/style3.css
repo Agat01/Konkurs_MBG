@@ -1,0 +1,392 @@
+@charset "UTF-8";
+body{
+    max-width: 100%;
+    background-color:#fffafb;
+}
+#kontener{
+ max-width: 100%; 
+ min-width: 850px;
+    background: #FFFFFF; 
+    margin: 0 auto;   
+    text-align: left; 
+}
+
+#left{
+float:left;
+   width:200px;
+   height:100%;
+}
+
+#right{
+margin-left:1px;
+   width: 100%-250px;
+min-width: 650px;
+   height:100%;
+   padding-bottom:20px;
+}
+.header {
+  padding: 10px;
+float: right;
+width: 80%;
+min-width: 650px;
+  text-align: center;
+  background: #469D89;
+  color: white;
+  font-size: 30px;
+}
+.mainContent {
+  float: right;
+  background-color: #fffafb;
+/*  padding-left: 200px;
+padding-right: 20px;*/
+ width: 80%;
+min-width: 600px;
+margin-left:1px;
+padding-bottom:20px;
+
+}
+.mainContent p, .mainContent h1,.mainContent h2,.mainContent h3,.mainContent h4,.mainContent ul, .mainContent li {
+padding-left: 2%;
+margin-left: 20px;
+padding-right: 20px;
+margin-right:20px;
+}
+
+footer {
+	text-align: center;
+ /* margin-left:250px; */
+  width: 80%;
+  min-width: 600px;
+  bottom: 0;
+position: fixed;
+	height: 35px;
+	background-color: #fffafb;
+}
+#footer p {
+		margin:0;
+		padding:7px;
+	}
+
+/*menu*/
+
+nav ul  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #036666;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+nav li a.active {
+  background-color: #7de2d1;
+  color: white;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #7de2d1;
+  color: white;
+}
+
+
+nav li a, menu.dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 40px;
+  text-decoration: none;
+}
+
+nav li a:hover, menu.dropdown:hover menu.dropbtn {
+  background-color: blue;
+}
+
+nav li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*formularz*/
+:required {
+  background: #d5dfe5;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],input[type=password],input[type=number],input[type=email], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit], input[type=button] {
+  background-color: #339989;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover, input[type=button]:hover {
+  background-color: #339989;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Set a style for all buttons */
+
+button.log {
+  background-color: #04AA6D;
+  color: white;
+  padding: 18px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button.log:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* nie? dla .close i .close:hover */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+*/
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+  .btn-group .button {
+  background-color: #339989; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  width: 160px;
+  display: block;
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #339989;
+}
+
+/*Two divs side by side - Fluid display */
+.flex-container {
+    display: flex;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 30px;
+    flex: 0 0 25%;
+} 
+.flex-child:second-child {
+    margin-right: 20px;
+} 
+
+
+.mainDiv
+{
+  color: #333333;
+  position: relative;
+  visibility: visible;
+}
+
+.dataDiv
+{
+  color: #333333;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  padding: 14px 14px 14px 14px;
+  visibility: visible;
+}
+
+.myButton
+{
+  font-family:helvetica,sans-serif;
+  font-size:84%;
+  font-weight:bold;
+  border:1px solid;
+  border-top-color:#339989;
+  border-left-color:#339989;
+  border-right-color:#339989;
+  border-bottom-color:#339989;
+  width:120px;
+  margin:5px;
+}
+
+/*tabela*/
+#uczestnicy, #klasy, #dane, #statystyki, #ranking {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#uczestnicy td, #uczestnicy th, #klasy td, #klasy th, #dane td, #dane th, #statystyki td, #statystyki th, #ranking td, #ranking th {
+  border: 1px solid b7e4c7;
+  padding: 8px;
+}
+/*
+#uczestnicy tr:nth-child(even),#klasy tr:nth-child(even){background-color: d8f3dc;}
+
+#uczestnicy tr:hover,#klasy tr:hover {background-color: b7e4c7;}
+*/
+#uczestnicy th,#klasy th, #dane th, #statystyki th, #ranking th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #339989;
+  color: white;
+}
+
+#trSzkola tr:nth-child(even),#klasy tr:nth-child(even){background-color: d8f3dc;}
+#trSzkola tr:hover,#klasy tr:hover {background-color: b7e4c7;}
+
+#statystyki td { 
+	border: 1px solid black; 
+	}
+
+
+/* ---------------------------------------------------- */
+/* walidacja formularza JS */
+/* ---------------------------------------------------- */
+.form input.field-error,
+.form textarea.field-error {
+    border-color: tomato;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
+}
+.form-error-text {
+    color: tomato;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+.form-error-inline .form-error-text {
+    display: none;
+}
+
+
+/* ---------------------------------------------------- */
+/* sukces wysylania */
+/* ---------------------------------------------------- */
+.form-send-success,
+.form-send-error {
+    font-family: sans-serif;
+}
+
+.form-send-success strong,
+.form-send-error strong {
+    display: block;
+    font-size: 1.5em;
+    color: tomato;
+    margin-bottom: 0.3em;
+}
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://cdn.dribbble.com/users/2973561/screenshots/5757826/media/221d6bfc1960ab98a7585fcc2a4d0181.gif") no-repeat center center rgba(0,0,0,0.25)
+}

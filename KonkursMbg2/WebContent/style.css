@@ -1,0 +1,477 @@
+@charset "UTF-8";
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    background-color:#fffafb;
+    height: 100%;
+	width: 100%;
+	position: relative;
+	overflow: auto;
+	left: 0px;	
+	top: 0px;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+#left{
+float:left;
+   width:180px;
+   height:100%;
+
+}
+
+#right{
+   height:100%;
+overflow: hidden;
+}
+.header {
+right: 5px; 
+left:193px; 
+top:5px;
+width: auto;
+	height:105px;
+	min-width: 645px;
+  text-align: center;
+  position: fixed;
+	overflow: hidden;
+  background: #036666;
+  color: white;
+ padding: 6px 14px 2px 14px;
+	z-index: 100;
+	font-style: normal;
+	font-variant: small-caps;
+	font-weight: bolder;
+	font-size:27px;
+	line-height:23px;	
+}
+.mainContent {
+  background-color: rgb(251, 255, 251);
+	right: 4px; 
+	left:190px; 
+	width: auto;
+	top: 125px; 	
+	bottom:25px; 
+	height:auto;
+	position: absolute;
+    overflow: auto;	
+	z-index: 20;
+	padding: 4px 4px 4px 4px;
+
+}
+.mainContent p, .mainContent h1,.mainContent h2,.mainContent h3,.mainContent h4,.mainContent ul, .mainContent li {
+padding-left: 2%;
+margin-left: 20px;
+padding-right: 20px;
+margin-right:20px;
+}
+
+footer {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	position: fixed;
+right: 4px; left:180px; width: auto;
+height: 20px;
+	bottom:1px;
+	vertical-align: bottom;
+	background-color: white;	
+	float: left;
+	font-family:"Times New Roman",Times,serif;
+		text-align: center;
+font-size:14px;
+font-weight:normal;
+line-height:12px;
+	z-index: 1;
+	padding-bottom:10px;
+}
+#footer p {
+		margin:0;
+		padding:2px;
+	}
+
+/*menu*/
+
+nav ul  {
+  list-style-type: none;
+  margin: 5px;
+  padding: 0;
+  width: 180px;
+  background-color: #036666;
+  position: fixed;
+   top: 0;
+  left: 0;
+  height: 100%;
+  overflow: auto;
+  font-size: 14px;
+  z-index: 300;
+}
+
+nav li a.active {
+  background-color: #7CC0A2;
+  color: white;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #7CC0A2;
+  color: white;
+}
+
+
+nav li a, menu.dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 40px;
+  text-decoration: none;
+}
+
+nav li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/*formularz*/
+:required {
+  background: rgb(234, 248, 231);
+}
+
+input[type=text],input[type=password],input[type=number],input[type=email], select, textarea {
+  width: 98%; 
+  padding: 8px; 
+  border: 1px solid rgb(200, 220, 188); 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-left: 4px;
+  margin-top: 4px; 
+  margin-bottom: 12px; 
+  resize: vertical 
+}
+input[type=button],input[type=submit] {
+  background-color: #339989;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#logout {
+  background-color: #339989;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  margin:4px;
+  width: 120px;
+}
+input[type=submit]:hover, input[type=button]:hover, #logout:hover {
+  opacity: 0.8;
+}
+#log {
+  width: 120px;
+}
+#log2 {
+width: 100%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.button button {
+  background-color: #339989;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+   width:120px;
+}
+.button {
+display: grid;
+  place-items: center;
+  margin:4px;
+}
+.button button:hover {
+  opacity: 0.8;
+}
+
+
+.dodaj, .usun {
+  background-color: #339989;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+}
+
+.dodaj:hover, .usun:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  background-color: #339989;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+   width:120px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(2%, 2%);
+  z-index: 500; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  width: 60%; 
+max-width: 400px;
+border-style: solid;
+  border-color: #339989;
+  border-width: 8px;
+}
+
+/* nie? dla .close i .close:hover */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+*/
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+ .btn-group .button {
+  background-color: #339989;
+  border: 1px solid #036666;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  cursor: pointer;
+  width: 160px;
+  display: block;
+}
+
+.btn-group .button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-group .button:hover {
+  background-color: #339989;
+}
+
+/*Two divs side by side - Fluid display */
+.flex-container {
+    display: flex;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.flex-child {
+    flex: 1;
+}  
+
+.flex-child:first-child {
+    margin-right: 30px;
+    flex: 0 0 25%;
+} 
+.flex-child:second-child {
+    margin-right: 20px;
+} 
+
+.mainDiv
+{
+  color: #333333;
+  position: relative;
+  visibility: visible;
+}
+
+.dataDiv
+{
+  color: #333333;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  padding: 14px 14px 14px 14px;
+  visibility: visible;
+}
+
+.myButton
+{
+  font-family:helvetica,sans-serif;
+  font-size:84%;
+  font-weight:bold;
+  border:1px solid;
+  border-top-color:#339989;
+  border-left-color:#339989;
+  border-right-color:#339989;
+  border-bottom-color:#339989;
+  width:120px;
+  margin:5px;
+}
+
+/*tabele*/
+#uczestnicy, #klasy, #dane, #statystyki, #ranking, #wynikiTable, #table, #szkoly {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ 
+}
+#uczestnicy tr:hover,#klasy tr:hover, #dane tr:hover, #statystyki tr:hover, #ranking tr:hover, #wynikiTable tr:hover, #table tr:hover, #szkoly tr:hover {
+	background-color: #ddd;
+	}
+
+#uczestnicy td, #klasy td, #dane td, #statystyki td, #ranking td, #wynikiTable td, #table td, #szkoly td {
+  border: 1px solid black;
+  padding: 8px;
+  font-size:12px;
+}
+/*
+#uczestnicy tr:nth-child(even),#klasy tr:nth-child(even){background-color: d8f3dc;}
+
+#uczestnicy tr:hover,#klasy tr:hover {background-color: b7e4c7;}
+*/
+#uczestnicy th, #klasy th, #statystyki th, #ranking th, #wynikiTable th, #table th, #szkoly th{
+  border: 1px solid black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #339989;
+  color: white;
+  font-size:14px;
+}
+#dane th{
+	border: 1px solid black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #339989;
+  color: white;
+  font-size:14px;
+  width:30%;
+}
+#wynikiTable {
+    display: none;
+  }
+	.kolor:nth-child(even) {
+    background-color: #A7DAC3;
+  }
+
+  .kolor:nth-child(odd) {
+    background-color: #fcfffd;
+  }
+	
+
+
+/* ---------------------------------------------------- */
+/* walidacja formularza JS */
+/* ---------------------------------------------------- */
+.form input.field-error,
+.form textarea.field-error {
+    border-color: tomato;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255,99,71, 0.3);
+}
+.form-error-text {
+    color: tomato;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+.form-error-inline .form-error-text {
+    display: none;
+}
+/*
+.form-send-success,
+.form-send-error {
+    font-family: sans-serif;
+}
+
+.form-send-success strong,
+.form-send-error strong {
+    display: block;
+    font-size: 1.5em;
+    color: tomato;
+    margin-bottom: 0.3em;
+}
+
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    :1;
+    background:url("https://icon-library.com/images/loading-icon-animated-gif/loading-icon-animated-gif-19.jpg") no-repeat center center rgba(0,0,0,0.25)
+}
+*/

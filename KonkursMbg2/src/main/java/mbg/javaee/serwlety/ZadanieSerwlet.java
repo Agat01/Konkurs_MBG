@@ -1,0 +1,125 @@
+package mbg.javaee.serwlety;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
+
+import mbg.javaee.encje.Zadanie;
+import mbg.javaee.utils.DatabaseConnectionManager;
+
+@WebServlet("/zadanie")
+public class ZadanieSerwlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+private List<Zadanie> zadania = new ArrayList<>();
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		zadania.clear();
+		response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+		int id=0;
+		String nazwa="";
+		int max_liczba_pkt=0;
+		
+		try {
+			
+			Connection conn = DatabaseConnectionManager.getConnection();
+			String sql="select id_zadanie, zadanie, max_liczba_pkt from zadanie";
+			Statement stmt = conn.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+				while(rs.next()) {
+					id=rs.getInt(1);
+					nazwa=rs.getString(2);
+					max_liczba_pkt=rs.getInt(3);
+					zadania.add(new Zadanie(id,nazwa,max_liczba_pkt));
+				}
+			
+		Gson gson = new Gson();
+        String json = gson.toJson(zadania);
+        
+        out.print(json);
+        out.flush();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}	
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/plain");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+		String metoda=request.getParameter("metoda");
+		String id_zadanie = request.getParameter("id_zadanie");
+		String nazwa = request.getParameter("nazwa");
+		String max_liczba = request.getParameter("max_liczba_pkt");
+	
+		int max_liczba_pkt=0;
+		if(max_liczba!=null) {
+		max_liczba_pkt=Integer.parseInt(max_liczba);
+		 }
+		
+        int id=0;
+        
+        if(id_zadanie!=null) {
+        	id=Integer.parseInt(id_zadanie);
+        }
+        out.println(nazwa);
+        
+        try {
+        	Connection conn = DatabaseConnectionManager.getConnection();
+        
+		if(metoda.equals("add")) {
+		PreparedStatement stmt = conn.prepareStatement("Insert into zadanie values(null,?,?)");
+		stmt.setString(1, nazwa);
+		stmt.setInt(2, max_liczba_pkt);
+		if (stmt.executeUpdate() > 0) {
+	        response.sendRedirect(request.getContextPath() + "/zadania.jsp");     
+		} else
+			response.getWriter().println("nie udało się");
+		}
+		else if(metoda.equals("edit")) {
+			PreparedStatement stmt = conn.prepareStatement("Update zadanie set zadanie=?, max_liczba_pkt=? where id_zadanie=?");
+			stmt.setString(1, nazwa);
+			stmt.setInt(2, max_liczba_pkt);
+    		stmt.setInt(3, id);
+    		
+    		if (stmt.executeUpdate() > 0) {
+    		//	doGet(request, response);
+    			response.sendRedirect(request.getContextPath() + "/zadania.jsp");  	        
+    		} else
+    			response.getWriter().println("nie udało się");	
+		}
+		else if(metoda.equals("delete")) {
+			PreparedStatement stmt = conn.prepareStatement("Delete from zadanie where id_zadanie=?");
+    		stmt.setInt(1, id);
+    		
+    		if (stmt.executeUpdate() > 0) {
+    	        response.sendRedirect(request.getContextPath() + "/zadania.jsp");	        
+    		} else
+    			response.getWriter().println("nie udało się");
+		}
+		
+        } catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		
+	}
+}
+

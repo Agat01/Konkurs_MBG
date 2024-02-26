@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
+ id="WebApp_ID" version="4.0">
+  <display-name>KonkursMbg</display-name>
+  <welcome-file-list>
+    <welcome-file>/</welcome-file>
+    <welcome-file>strona.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>FormularzSerwlet</servlet-name>
+  	<servlet-class>mbg.javaee.serwlety.FormularzSerwlet</servlet-class>
+  </servlet>
+  <!-- 
+   <servlet-mapping>
+ 	<servlet-name>FormularzSerwlet</servlet-name>
+ 	<url-pattern>/formularz</url-pattern>
+ </servlet-mapping>
+-->
+ <servlet>
+  	<servlet-name>LogowanieSerwlet</servlet-name>
+  	<servlet-class>mbg.javaee.serwlety.LogowanieSerwlet</servlet-class>
+  </servlet>
+   <!--
+  <servlet-mapping>
+ 	<servlet-name>LogowanieSerwlet</servlet-name>
+ 	<url-pattern>/logowanie</url-pattern>
+ </servlet-mapping>
+ -->
+  <servlet>
+  	<servlet-name>KontoSerwlet</servlet-name>
+  	<servlet-class>mbg.javaee.serwlety.KontoSerwlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>WojewodztwoSerwlet</servlet-name>
+  	<servlet-class>mbg.javaee.serwlety.WojewodztwoSerwlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DaneSerwlet</servlet-name>
+  	<servlet-class>mbg.javaee.serwlety.DaneSerwlet</servlet-class>
+  </servlet>
+ 
+  <login-config> 
+    <auth-method>FORM</auth-method> 
+    <form-login-config> 
+        <form-login-page>/konto</form-login-page> 
+        <form-error-page>/strona.jsp</form-error-page> 
+    </form-login-config> 
+</login-config>
+<!-- 
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>regula</web-resource-name>
+<url-pattern>/strona.html</url-pattern>
+<url-pattern>/formularz</url-pattern>
+<url-pattern>/logowanie</url-pattern>
+<url-pattern>/konto</url-pattern>
+<http-method>GET</http-method>
+<http-method>POST</http-method>
+</web-resource-collection>
+<auth-constraint>
+<role-name>uzytkownik</role-name>
+</auth-constraint>
+<user-data-constraint>
+<transport-guarantee>NONE</transport-guarantee>
+</user-data-constraint>
+</security-constraint>
+
+ -->
+ <!-- SMTP settings -->
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>bagata543@gmail.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>agata2001</param-value>
+    </context-param>
+
+<jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+</jsp-config>
+
+</web-app>
